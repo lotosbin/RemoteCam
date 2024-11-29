@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.SettingsExtension
+
 /*
  * Copyright 2020 The Android Open Source Project
  *
@@ -13,6 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-include 'app'
-include 'utils'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+plugins {
+    id("com.android.settings") version "8.7.2"
+}
+configure<SettingsExtension> {
+    compileSdk = 35
+    minSdk = 24
+}
+include("app")
+include("utils")

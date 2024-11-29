@@ -21,10 +21,8 @@ apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'kotlin-parcelize'
 
 android {
-    compileSdk 35
     defaultConfig {
         applicationId "com.samsung.android.scan3d"
-        minSdkVersion 24
         targetSdkVersion 33
         versionCode 4
         versionName "0.0.4"
